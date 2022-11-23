@@ -1,6 +1,6 @@
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx}",
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
@@ -22,7 +22,7 @@ module.exports = {
       backgroundImage: {
         "contact-bg": "url('/images/home/mobile-ap-bg.jpeg')",
         "hero-shop":
-          "url('https://res.cloudinary.com/duv7awivc/image/upload/v1667960356/shop/bg-shop_bhtavi.webp')",
+          "url('https://res.cloudinary.com/duv7awivc/image/upload/v1668759173/shop/bg-shop_bhtavi_kgaeel.webp')",
         "hero-home": "url('/images/home/hero-background.jpeg')",
       },
     },

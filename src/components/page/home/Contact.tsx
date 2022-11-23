@@ -105,7 +105,7 @@ const Contact = ({
                 <FormInput
                   key={idx}
                   {...input}
-                  value={formContact[input.name as nameType]}
+                  value={formContact[input.name as "name"]}
                   onChange={handleFormContact}
                   className="w-full text-[14px] md:text-[17px] leading-[24px] px-[18px] py-3 md:py-[12px] font-light mb-5 md:mb-[34px] border border-['#e0e8ee'] text-['#555'] bg-chipo-bg-second rounded-[4px]"
                 />

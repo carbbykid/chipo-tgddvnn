@@ -6,9 +6,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    URL: process.env.URL,
-    MONGODB_URI: process.env.MONGODB_URI,
-    MONGODB_DB: process.env.MONGODB_DB,
+    DEV_URL: process.env.DEV_URL,
+    MONGO_URL: process.env.MONGO_URL,
+    DB_NAME: process.env.DB_NAME,
+  },
+  images: {
+    domains: ["res.cloudinary.com"],
   },
 };
 

@@ -1,4 +1,4 @@
-import Email from "models/Email";
+import Product from "models/Product";
 import { NextApiRequest, NextApiResponse } from "next";
 import dbConnect from "../../util/mongodb";
 export default async function handler(
@@ -9,7 +9,7 @@ export default async function handler(
   dbConnect();
   if (method === "GET") {
     try {
-      const emails = await Email.find();
+      const emails = await Product.find();
       res.status(200).json(emails);
     } catch (error) {
       res.status(500).json(error);
@@ -17,7 +17,7 @@ export default async function handler(
   }
   if (method === "POST") {
     try {
-      const email = await Email.create(body);
+      const email = await Product.create(body);
       res.status(201).json(email);
     } catch (error) {
       res.status(500).json(error);

@@ -38,7 +38,7 @@ const NewsLetter = ({
           <form onSubmit={handleSubmit} className="max-w-[750px] m-auto">
             <div className="flex">
               <input
-                type="text"
+                type="email"
                 className="text-[16px] md:text-[19px] leading-[60px] md:leading-[80px] px-6 pd:px-[38px] w-full bg-white"
                 placeholder="Enter Your Email Address"
                 value={email}

@@ -4,6 +4,7 @@ import { FaPlusCircle } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import Link from "next/link";
 import { toast } from "react-toastify";
+import Image from "next/image";
 
 const Product = ({ product }: { product: ProductType }) => {
   const dispatch = useDispatch();
@@ -12,7 +13,15 @@ const Product = ({ product }: { product: ProductType }) => {
     <div className="justify-center">
       <Link href={`/product/${product.id}`}>
         <a className="cursor-pointer">
-          <img className="duration-200 hover:scale-105" src={product.imgUrl} />
+          <div className="duration-200 hover:scale-105">
+            <Image
+              src={product.imgUrl}
+              width={500}
+              height={500}
+              objectFit="contain"
+            />
+          </div>
+
           <h4 className="text-black mt-2 md:mt-3">{product.productName}</h4>
           <span className="font-serif inline-block text-black text-[16px] bg-green-300 px-2 rounded-md mt-2 md:mt-3">
             {product.category}
