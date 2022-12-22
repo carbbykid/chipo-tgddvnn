@@ -1,5 +1,5 @@
 import TableCustom from "components/common/TableCustom";
-import AddProductForm from "components/page/admin/addProductForm";
+// import AddProductForm from "components/page/admin/addProductForm";
 import Axios from "config/Axios";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -25,7 +25,7 @@ const Admin = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="pt-36 pb-20 wrap-content">
-        <AddProductForm />
+        {/* <AddProductForm /> */}
         <div className="mt-10">
           <TableCustom
             title="Product List"
