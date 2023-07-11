@@ -1,6 +1,6 @@
 import { selectAllQuantityProducts } from "redux/slice/cartSlice";
 import Link from "next/link";
-import { useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
 import { FaHeart, FaShoppingBag } from "react-icons/fa";
 import { useSelector } from "react-redux";
@@ -14,7 +14,7 @@ const Header = (): JSX.Element => {
     setNav(!nav);
   };
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     const changeColor = () => {
       if (window.scrollY >= 30) {
         setIsScroll(true);

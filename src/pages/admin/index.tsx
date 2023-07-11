@@ -1,6 +1,7 @@
 import TableCustom from "components/common/TableCustom";
-// import AddProductForm from "components/page/admin/addProductForm";
+import AddProductForm from "components/page/admin/AddProductForm";
 import Axios from "config/Axios";
+import { ModalContextProvider } from "context/ModelContext";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import { FaEdit, FaRegTrashAlt } from "react-icons/fa";
@@ -10,7 +11,6 @@ const Admin = () => {
   useEffect(() => {
     const getData = async () => {
       const res = await Axios.get("/newsletter");
-      console.log(res.data);
       setEmails(res.data);
     };
 
@@ -18,23 +18,25 @@ const Admin = () => {
   }, []);
 
   return (
-    <div className="bg-gray-900">
-      <Head>
-        <title>ChiPoPo</title>
-        <meta name="description" content="I'm Front-end developer" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="pt-36 pb-20 wrap-content">
-        {/* <AddProductForm /> */}
-        <div className="mt-10">
-          <TableCustom
-            title="Product List"
-            data={emails}
-            titleRow={titleEmailRow}
-          />
+    <ModalContextProvider>
+      <div className="bg-gray-900">
+        <Head>
+          <title>ChiPoPo</title>
+          <meta name="description" content="I'm Front-end developer" />
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="pt-36 pb-20 wrap-content">
+          <AddProductForm />
+          <div className="mt-10">
+            <TableCustom
+              title="Product List"
+              data={emails}
+              titleRow={titleEmailRow}
+            />
+          </div>
         </div>
       </div>
-    </div>
+    </ModalContextProvider>
   );
 };
 
